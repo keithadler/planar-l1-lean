@@ -24,9 +24,21 @@ It exists to support a **human reader's own verification** of that paper; for pl
 | [`PlanarL1/Refinement.lean`](PlanarL1/Refinement.lean) | §3.2, Lemma 3.2 | component refinement (domination, the same upper bound, the separation clause "$=2$") and **exact gluing** | 149 |
 | [`PlanarL1/Constants.lean`](PlanarL1/Constants.lean) | §5.1 | the explicit constants and every inequality later used from them; a nonempty `Choice` structure for $a_1,a_2$ | 59 |
 | [`PlanarL1/Update.lean`](PlanarL1/Update.lean) | §6.1–6.2 | Lemma 6.1, Definition 6.2, Lemma 6.3 (raise or descend), Corollary 6.4, Lemma 6.5, formula (29) | 84 |
+| [`PlanarL1/CrossCheck.lean`](PlanarL1/CrossCheck.lean) | §5.1 | a cross-check: OpenAI's concrete widths $a_1=10^{-100}$, $a_2=10^{-160}$ satisfy our `Choice` hypotheses | 14 |
 
-342 declarations in all. Every one of them depends only on `propext`, `Classical.choice` and `Quot.sound` (checked by an automated audit of *every* theorem and definition, not only the headline ones).
+356 declarations in all. Every one of them depends only on `propext`, `Classical.choice` and `Quot.sound` (checked by an automated audit of *every* theorem and definition, not only the headline ones).
 A statement-by-statement map from the paper to Lean is in [`docs/theorem-map.md`](docs/theorem-map.md).
+
+## OpenAI's own Lean formalisation
+
+OpenAI published a Lean 4 formalisation of this very theorem alongside the paper: the formal statement is
+[`lean/ComparatorChallenges/PlanarL1.lean`](https://github.com/openai/math/blob/main/lean/ComparatorChallenges/PlanarL1.lean)
+and the proof is in [`lean/OAI/Combinatorics/PlanarL1/`](https://github.com/openai/math/tree/main/lean/OAI/Combinatorics/PlanarL1)
+(63 files; the top-level theorem is `OAI.PlanarL1.planar_graph_metrics_embed_L1` in `Embedding.lean`). We have **not** compiled it. A text scan of those 63 files found no `sorry`, `axiom` declaration, `native_decide` or `unsafe`, which says nothing about whether it builds.
+
+**This repository is a much smaller, independent cross-check, not the main verification.** Its files were written from the paper's PDF alone, **before** anyone on this project read any of OpenAI's Lean ("clean room" with respect to their code). Only afterwards were three things read from OpenAI's repository: the statement file above, the top-level `Embedding.lean`, and the two concrete widths in their `Parameters.lean` (used in `CrossCheck.lean`). The numerical constants of Section 5.1 agree between the two independent readings of the paper.
+
+The most useful quick human check is whether OpenAI's roughly 40-line `MainStatement` says what Theorem 1.1 says.
 
 ## What is assumed, and what is not formalised
 
