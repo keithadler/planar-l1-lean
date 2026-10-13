@@ -10,7 +10,7 @@ Companion notes for human readers: [`planar-l1-companion`](https://github.com/ke
 * It formalises **parts of Sections 3, 5 and 6** only (below). It is **not** a proof of the paper's main theorem, and Sections 2, 4, 6.3, 7, 8 and 9 are not formalised.
 * Everything a formalised lemma needs from an unformalised part (Theorem 4.1, Lemmas 2.11 and 2.12, …) is an **explicit hypothesis** (a structure field or an argument). There is no `sorry`, no new `axiom`, no `native_decide`.
 * A compile shows the *formal statement* follows from its *hypotheses*. Whether a statement matches the paper's, and whether the hypotheses hold, needs a human; each theorem's docstring quotes the paper and lists the differences.
-* **No expert has reviewed this.** The Lean files were written by Claude (AI) with Keith Adler, and compiled and audited independently by the same pair; the proofs are checked by Lean's kernel, the statements were read against the paper by the authors only.
+* **No expert has reviewed this.** The Lean files were written by Claude (AI) subagents for Keith Adler, then compiled and audited in a separate Claude session. The proofs are checked by Lean's kernel; the statements were read against the paper only by that session.
 
 ## Contents
 
