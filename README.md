@@ -8,3 +8,7 @@ Scope: parts of Sections 3, 5 and 6. Anything those lean on from other sections 
 is stated as an explicit hypothesis. It is NOT a proof of the paper's main theorem, and no `sorry` or new axiom is allowed.
 `NOTES.md` has plain-language notes on the sections. `TASKS.md` is the work list and the rules.
 Started by Keith Adler with Claude; unaffiliated with the paper's authors.
+
+## Licence
+
+Copyright 2026 Keith Adler. Licensed under the [Apache License, Version 2.0](LICENSE), the licence Mathlib uses. The paper formalised here is OpenAI's; this repository contains only original statements and proofs that reference it.
