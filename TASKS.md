@@ -18,7 +18,7 @@ Label space `Ω = ℝ × Bool` with measure `volume.prod (½(δ_true + δ_false)
 or use the product space if it is not much harder). For `Z, σ` and fields: `A_v = {ω | Z ω < h v + σ ω * κ * P v}`.
 1. Identity (5): `μ(A_v △ A_w) = max{|h v − h w|, κ |P v − P w|}` for `κ > 0`.
 2. Nesting: if `κ * Lip_vert(P) < 1` the sets are increasing in `h` on a column interval and the symmetric difference has measure equal to the vertical length.
-3. Rebasing: for `ψ : ℝ → ℝ` Lipschitz with `κ Lip ψ < 1`, `φ_σ(H) = H + σ κ ψ(H)` are increasing bijections; `Z' = φ_σ⁻¹(Z)` has Lebesgue pushforward jointly with `σ`; and `{Z < φ_σ(h)} = {Z' < h}`.
+3. Rebasing: for `ψ : ℝ → ℝ` Lipschitz with `κ Lip ψ < 1`, `φ_σ(H) = H + σ κ ψ(H)` are increasing bijections; `Z' = φ_σ⁻¹(Z)` has Lebesgue pushforward and is independent of a *fresh* sign `σ'` (not of the old `σ`: given `σ = b`, `Z'` has law `(φ_b⁻¹)_* Lebesgue`, which depends on `b`); and `{Z < φ_σ(h)} = {Z' < h}`.
 
 ## Task B: `PlanarL1/Refinement.lean` (Section 3.2, Lemma 3.2 and the gluing invariant)
 Abstract the column model: a finite set of columns, switches `(i, j, height)`, a noncrossing circular order given as a hypothesis,
