@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this formalisation, please cite it as below."
+title: "planar-l1-lean: a conditional Lean 4 formalisation of selected lemmas of OpenAI's planar L1-embedding preprint"
+type: software
+authors:
+  - family-names: Adler
+    given-names: Keith
+license: Apache-2.0
+repository-code: "https://github.com/keithadler/planar-l1-lean"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - metric embeddings
+  - planar graphs
+abstract: "A conditional Lean 4 / Mathlib formalisation of parts of Sections 3, 5 and 6 of OpenAI's 23 September 2026 preprint 'Planar Graph Metrics Embed into L1 with Constant Distortion'. Hypotheses taken from other sections are explicit; no sorry, no new axioms. Not reviewed by an expert."
